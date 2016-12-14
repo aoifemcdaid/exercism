@@ -1,5 +1,8 @@
 class Hamming
   def self.compute(dna1, rna2)
+    if dna1.length != rna2.length
+      raise(ArgumentError)
+    end
     dna = dna1.split('')
     rna = rna2.split('')
     result = 0
@@ -11,3 +14,5 @@ class Hamming
     result
   end
 end
+
+
