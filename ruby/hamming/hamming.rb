@@ -1,3 +1,8 @@
+module BookKeeping
+  VERSION = 3
+end
+
+
 class Hamming
   def self.compute(dna1, rna2)
     if dna1.length != rna2.length

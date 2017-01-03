@@ -1,5 +1,9 @@
 require 'active_support/core_ext/enumerable'
 
+module BookKeeping
+  VERSION = 3
+end
+
 
 class Squares
   def initialize(number)

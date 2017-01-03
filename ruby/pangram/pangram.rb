@@ -1,16 +1,10 @@
+module BookKeeping
+  VERSION = 3
+end
+
 class Pangram
   def self.pangram?(phrase)
-    if phrase.length == 0
-      return nil
-    end
-    alphabet = ('a'..'z').to_a
-    phrase.downcase.split('').each do |letter|
-      alphabet.delete(letter)
-    end
-    if alphabet.length == 0
-      return "#{phrase.inspect} IS a pangram"
-    else
-      return nil
-    end
+    unused_letters = ('a'..'z').to_a - phrase.downcase.chars.to_a
+    unused_letters.empty?
   end
 end
